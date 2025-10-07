@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventas - Sistema TUCAN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1><i class="fas fa-cash-register"></i> TUCAN</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="ventas.html"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
+                    <li><a href="gestion.html"><i class="fas fa-boxes"></i> Inventario</a></li>
+                    <li><a href="personal.html"><i class="fas fa-users"></i> Personal</a></li>
+                    <li><a href="empresa.html"><i class="fas fa-building"></i> Empresa</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h2><i class="fas fa-shopping-cart"></i> Sistema de Ventas</h2>
+                <p>Registro y gestión de ventas</p>
+            </div>
+
+            <div class="sales-container">
+                <div class="sales-form">
+                    <h3><i class="fas fa-barcode"></i> Registrar Venta</h3>
+                    
+                    <div class="form-group">
+                        <label for="cliente"><i class="fas fa-user"></i> Cliente</label>
+                        <input type="text" id="cliente" placeholder="Nombre del cliente o RUC">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tipo-venta"><i class="fas fa-tag"></i> Tipo de Venta</label>
+                        <select id="tipo-venta">
+                            <option value="precio_1">Venta 1</option>
+                            <option value="precio_2">Venta 2</option>
+                            <option value="precio_3">Venta 3</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="producto"><i class="fas fa-box"></i> Producto</label>
+                        <select id="producto">
+                            <option value="">Seleccionar producto</option>
+                            <option value="1">Producto A</option>
+                            <option value="2">Producto B</option>
+                            <option value="3">Producto C</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cantidad"><i class="fas fa-sort-numeric-up"></i> Cantidad</label>
+                        <input type="number" id="cantidad" min="1" value="1">
+                    </div>
+                    
+                    <button class="btn btn-primary" id="agregar-producto">
+                        <i class="fas fa-plus"></i> Agregar Producto
+                    </button>
+                </div>
+
+                <div class="sales-summary">
+                    <h3><i class="fas fa-receipt"></i> Resumen de Venta</h3>
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <span>Producto A x 2</span>
+                            <span>$20.00</span>
+                        </div>
+                        <div class="cart-item">
+                            <span>Producto B x 1</span>
+                            <span>$15.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="total-section">
+                        <div class="total-row">
+                            <span>Total:</span>
+                            <span class="total-amount">$35.00</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Recibido:</span>
+                            <input type="number" id="recibido" placeholder="$0.00" step="0.01">
+                        </div>
+                        <div class="total-row">
+                            <span>Cambio:</span>
+                            <span class="change-amount">$0.00</span>
+                        </div>
+                    </div>
+                    
+                    <button class="btn btn-success" id="generar-factura">
+                        <i class="fas fa-file-invoice"></i> Generar Factura
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2023 Sistema TUCAN - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/ventas.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sistema TUCAN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1><i class="fas fa-cash-register"></i> TUCAN</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="ventas.html"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
+                    <li><a href="gestion.html"><i class="fas fa-boxes"></i> Inventario</a></li>
+                    <li><a href="personal.html"><i class="fas fa-users"></i> Personal</a></li>
+                    <li><a href="empresa.html"><i class="fas fa-building"></i> Empresa</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="dashboard-header">
+                <h2><i class="fas fa-tachometer-alt"></i> Dashboard Principal</h2>
+                <p>Bienvenido al sistema de facturación TUCAN</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card sales-card">
+                    <div class="card-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ventas Hoy</h3>
+                        <p class="amount">$2,540.00</p>
+                        <p class="change">+12% desde ayer</p>
+                    </div>
+                </div>
+
+                <div class="card inventory-card">
+                    <div class="card-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Productos</h3>
+                        <p class="amount">142</p>
+                        <p class="change">+5 nuevos</p>
+                    </div>
+                </div>
+
+                <div class="card customers-card">
+                    <div class="card-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Clientes</h3>
+                        <p class="amount">87</p>
+                        <p class="change">+3 nuevos</p>
+                    </div>
+                </div>
+
+                <div class="card revenue-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Ingresos</h3>
+                        <p class="amount">$12,450.00</p>
+                        <p class="change">+8% este mes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-activity">
+                <h3><i class="fas fa-history"></i> Actividad Reciente</h3>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <i class="fas fa-shopping-cart text-success"></i>
+                        <div class="activity-info">
+                            <span>Nueva venta registrada</span>
+                            <small>10 minutos ago</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-box text-warning"></i>
+                        <div class="activity-info">
+                            <span>Producto agotado</span>
+                            <small>1 hora ago</small>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <i class="fas fa-user-plus text-info"></i>
+                        <div class="activity-info">
+                            <span>Nuevo cliente registrado</span>
+                            <small>2 horas ago</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2023 Sistema TUCAN - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

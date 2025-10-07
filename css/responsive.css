@@ -1,0 +1,72 @@
+/* Mobile First Approach */
+
+/* Extra Small Devices */
+@media (max-width: 576px) {
+    .main-content {
+        padding: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .feature-card {
+        padding: 1rem;
+    }
+}
+
+/* Small Devices */
+@media (min-width: 576px) and (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Medium Devices */
+@media (min-width: 768px) and (max-width: 992px) {
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+    
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Devices */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .hero h2 {
+        font-size: 2.4rem;
+    }
+}
+
+/* Extra Large Devices */
+@media (min-width: 1200px) {
+    .hero h2 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Specific element adjustments */
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .feature-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .feature-card i {
+        font-size: 2rem;
+    }
+}

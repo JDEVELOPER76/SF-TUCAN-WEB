@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal - Sistema TUCAN</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1><i class="fas fa-cash-register"></i> TUCAN</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="ventas.html"><i class="fas fa-shopping-cart"></i> Ventas</a></li>
+                    <li><a href="gestion.html"><i class="fas fa-boxes"></i> Inventario</a></li>
+                    <li><a href="personal.html"><i class="fas fa-users"></i> Personal</a></li>
+                    <li><a href="empresa.html"><i class="fas fa-building"></i> Empresa</a></li>
+                    <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="page-header">
+                <h2><i class="fas fa-users"></i> Gestión de Personal</h2>
+                <p>Administración de empleados y administradores</p>
+            </div>
+
+            <div class="personal-container">
+                <div class="personal-tabs">
+                    <button class="tab-btn active" data-tab="empleados">Empleados</button>
+                    <button class="tab-btn" data-tab="administradores">Administradores</button>
+                </div>
+
+                <div class="tab-content active" id="empleados-tab">
+                    <div class="personal-form">
+                        <h3><i class="fas fa-user-plus"></i> Nuevo Empleado</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emp-id"><i class="fas fa-id-card"></i> ID</label>
+                                <input type="text" id="emp-id" placeholder="ID único del empleado">
+                            </div>
+                            <div class="form-group">
+                                <label for="emp-nombre"><i class="fas fa-user"></i> Nombre</label>
+                                <input type="text" id="emp-nombre" placeholder="Nombre completo">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="emp-usuario"><i class="fas fa-user-tag"></i> Usuario</label>
+                                <input type="text" id="emp-usuario" placeholder="Nombre de usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="emp-password"><i class="fas fa-lock"></i> Contraseña</label>
+                                <input type="password" id="emp-password" placeholder="Contraseña">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" id="guardar-empleado">
+                            <i class="fas fa-save"></i> Guardar Empleado
+                        </button>
+                    </div>
+
+                    <div class="personal-list">
+                        <h3><i class="fas fa-list"></i> Empleados Registrados</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Usuario</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EMP001</td>
+                                    <td>Juan Pérez</td>
+                                    <td>juanp</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>EMP002</td>
+                                    <td>Maria García</td>
+                                    <td>maria</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="administradores-tab">
+                    <div class="personal-form">
+                        <h3><i class="fas fa-user-shield"></i> Nuevo Administrador</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adm-id"><i class="fas fa-id-card"></i> ID</label>
+                                <input type="text" id="adm-id" placeholder="ID único del administrador">
+                            </div>
+                            <div class="form-group">
+                                <label for="adm-nombre"><i class="fas fa-user"></i> Nombre</label>
+                                <input type="text" id="adm-nombre" placeholder="Nombre completo">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="adm-usuario"><i class="fas fa-user-tag"></i> Usuario</label>
+                                <input type="text" id="adm-usuario" placeholder="Nombre de usuario">
+                            </div>
+                            <div class="form-group">
+                                <label for="adm-password"><i class="fas fa-lock"></i> Contraseña</label>
+                                <input type="password" id="adm-password" placeholder="Contraseña">
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" id="guardar-administrador">
+                            <i class="fas fa-save"></i> Guardar Administrador
+                        </button>
+                    </div>
+
+                    <div class="personal-list">
+                        <h3><i class="fas fa-list"></i> Administradores Registrados</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nombre</th>
+                                    <th>Usuario</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ADM001</td>
+                                    <td>Carlos López</td>
+                                    <td>carlos</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></button>
+                                        <button class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2023 Sistema TUCAN - Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/personal.js"></script>
+</body>
+</html>
